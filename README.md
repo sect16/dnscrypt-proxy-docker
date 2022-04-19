@@ -1,10 +1,18 @@
 # dnscrypt-proxy-docker
-A custom dnscrypt-proxy docker container for Raspberrypi OS Bullseye.
+A dnscrypt-proxy docker container for Raspberrypi OS Bullseye.
 # Usage
-Build the image:
+Build the image yourself using Dockerfile:
 
 ```
+git clone https://github.com/sect16/dnscrypt-proxy-docker.git
+cd dnscrypt-proxy-docker
 sudo docker build -t dnscrypt-proxy .
+```
+
+Or pull image from docker hub:
+
+```
+docker pull sect16/public:dnscrypt-proxy
 ```
 
 # Starting the container

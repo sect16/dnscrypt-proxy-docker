@@ -27,3 +27,7 @@ To open container console use:
 ```
 docker exec -it dnscrypt-proxy sh
 ```
+To check DNS connection use:
+```
+./dnscrypt-proxy -resolve example.com,127.0.0.1:5350
+```

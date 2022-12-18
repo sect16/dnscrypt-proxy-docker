@@ -2,13 +2,16 @@ version: '3.3'
 services:
     dnscrypt-proxy:
         ports:
-            - '5350:53/udp'
-            - '5350:53/tcp'
+          - '5350:53/udp'
+          - '5350:53/tcp'
         container_name: dnscrypt-proxy
+        environment:
+          -  TZ=Asia/Kuala_Lumpur
         entrypoint:
-        - /opt/dnscrypt-proxy/dnscrypt-proxy
-        - -config
-        - /opt/dnscrypt-proxy/dnscrypt-proxy.toml
-
+          - /opt/dnscrypt-proxy/dnscrypt-proxy
+          - -config
+          - /usr/share/dnscrypt-proxy/dnscrypt-proxy.toml
+        volumes:
+          - /usr/share/dnscrypt-proxy:/usr/share/dnscrypt-proxy
         restart: unless-stopped
         image: sect16/public:dnscrypt-proxy

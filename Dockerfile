@@ -4,7 +4,7 @@ MAINTAINER Chin Pin Hon
 
 RUN apk add --no-cache tzdata curl bind-tools 
 
-RUN curl -L https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.2/dnscrypt-proxy-linux_arm64-2.1.2.tar.gz > /tmp/dnscrypt-proxy.tar.gz && \
+RUN curl -L https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.3/dnscrypt-proxy-linux_arm64-2.1.3.tar.gz > /tmp/dnscrypt-proxy.tar.gz && \
     mkdir /opt/dnscrypt-proxy && \
     cd /opt/dnscrypt-proxy && \
     tar xvzf /tmp/dnscrypt-proxy.tar.gz --strip-components 1 && \
